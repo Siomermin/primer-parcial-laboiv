@@ -34,13 +34,11 @@ export class LoginComponent {
           this.router.navigateByUrl('/bienvenida');
         },
         (error) => {
-          console.error(error);
           Swal.fire({
             icon: 'error',
-            title: 'Error!!!',
-            text: error.message
+            title: error.message
           });
-        }
+       }
       );
     }
   }
@@ -64,11 +62,10 @@ export class LoginComponent {
       (res) => {
         console.log(res?.email);
       },
-      (err) => {
+      (error) => {
         Swal.fire({
           icon: 'error',
-          title: 'Error!!!',
-          text: err.message
+          title: error.message
         });
       }
     );

@@ -26,6 +26,15 @@ const routes: Routes = [
       canActivate: [AuthGuard],
       data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
   },
+  {
+    path: 'repartidor/detalle',
+    loadChildren: () =>
+      import('./modules/repartidor/detalle-repartidor/detalle-repartidor.module').then(
+        (m) => m.DetalleRepartidorModule
+      ),
+      canActivate: [AuthGuard],
+      data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
+  },
 ];
 
 @NgModule({
