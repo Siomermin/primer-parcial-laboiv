@@ -97,8 +97,18 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "primer-parcial-laboiv:build:production"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "af41b466-c347-4bd3-9f3e-37b7f0aea659"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "primer-parcial-laboiv",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
