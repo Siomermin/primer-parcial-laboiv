@@ -35,6 +35,15 @@ const routes: Routes = [
       canActivate: [AuthGuard],
       data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
   },
+  {
+    path: 'helados',
+    loadChildren: () =>
+      import('./modules/helados/helados.module').then(
+        (m) => m.HeladosModule
+      ),
+      canActivate: [AuthGuard],
+      data: { authGuardPipe: () => redirectUnauthorizedTo('login') }
+  },
 ];
 
 @NgModule({
